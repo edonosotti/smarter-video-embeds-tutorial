@@ -19,6 +19,8 @@ See:
 
 and check the comments in the files.
 
+[Open in JSFiddle](https://jsfiddle.net/gh/get/library/pure/edonosotti/smarter-video-embeds-tutorial/tree/master/www)
+
 ## Reference documentation
 
 See:

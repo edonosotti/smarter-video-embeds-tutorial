@@ -85,10 +85,30 @@ function setCustomSelectorVideoControls() {
   });
 }
 
+function fixLinksForJsFiddle() {
+  /* Helper function to change self-hosted video links
+   * to absolute URLs to GitHub Pages to run the code
+   * in JSFiddle. */
+  if (window.location.href.indexOf('fiddle.jshell.net') < 0) {
+    return;
+  }
+
+  $('video source').each(function() {
+    var src = $(this).attr('src');
+    src = 'https://edonosotti.github.io/smarter-video-embeds-tutorial/www/' + src;
+    $(this).attr('src', src);
+  });
+
+  $('video').each(function() {
+    $(this)[0].load();
+  })
+}
+
 $(function() {
   var videos = getVideoEmbeds();
   resizeVideos(videos);
   setCustomCovers(videos);
   setCustomVideoControls();
   setCustomSelectorVideoControls();
+  fixLinksForJsFiddle();
 });
