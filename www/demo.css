@@ -1,0 +1,31 @@
+video {
+  width: 100%;
+}
+
+.custom-video-cover {
+  display: table-cell;
+  background-size: cover;
+  color: #fff;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+}
+
+.custom-video-cover:hover {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+p {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+[class^="col-"] {
+  padding: 20px;
+  margin-bottom: 20px;
+}

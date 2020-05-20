@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="demo.css">
+
+    <title>Smartify Your Video Embeds - Tutorial</title>
+  </head>
+  <body>
+
+    <h1 class="container">Video embed demos</h1>
+
+    <div class="container">
+      <div class="row">
+
+        <!-- Youtube video -->
+        <div class="col-md-6 col-sm-12">
+          <p>Responsive YouTube video</p>
+          <iframe
+            src="https://www.youtube.com/embed/vmR8mg3zPRg"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            width="100%"
+            frameborder="0"
+            allowfullscreen
+            ></iframe>
+        </div>
+
+        <!-- Vimeo video -->
+        <div class="col-md-6 col-sm-12">
+          <p>Responsive Vimeo video</p>
+          <iframe
+            src="https://player.vimeo.com/video/132977816"
+            width="100%"
+            frameborder="0"
+            allow="fullscreen"
+            allowfullscreen
+            ></iframe>
+        </div>
+
+        <!-- Vimeo video with custom cover -->
+        <!-- The custom cover is set with the "data-custom-cover" attribute
+             of the <iframe> tag. The embedded video needs to have "autoplay"
+             enabled to be effective. -->
+        <div class="col-md-6 col-sm-12">
+          <p>Vimeo video with custom cover and "play on click"</p>
+          <iframe
+            src="https://player.vimeo.com/video/132977816?autoplay=1&loop=1"
+            allow="autoplay; fullscreen"
+            width="100%"
+            frameborder="0"
+            allowfullscreen
+            data-custom-cover="https://picsum.photos/id/1071/1080/720"
+            data-custom-cover-label="<span class='btn btn-lg btn-info fa fa-play'></span>"
+            ></iframe>
+        </div>
+
+        <!-- YouTube video with custom cover -->
+        <!-- The custom cover is set with the "data-custom-cover" attribute
+             of the <iframe> tag. The embedded video needs to have "autoplay"
+             enabled to be effective. -->
+        <div class="col-md-6 col-sm-12">
+          <p>YouTube video with custom cover and "play on click"</p>
+          <iframe
+            src="https://www.youtube.com/embed/vmR8mg3zPRg?autoplay=1"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            width="100%"
+            frameborder="0"
+            allowfullscreen
+            data-custom-cover="https://picsum.photos/id/1070/1080/720"
+            data-custom-cover-label="<span class='btn btn-lg btn-danger fa fa-play'></span>"
+            ></iframe>
+        </div>
+
+        <!-- Self-hosted background video -->
+        <!-- This video will play automatically and muted ("muted" is required
+             in many browsers to allow the autoplay). It will also loop
+             indefinitely, so it can be used as an animated background. -->
+        <div class="col-md-6 col-sm-12">
+          <p>Self-hosted background video (autoplay, loop, no controls)</p>
+          <video autoplay playsinline loop muted preload>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Self-hosted video with custom cover -->
+        <!-- The "preload" option would prevent the cover image
+             to show up in some browsers, so it was not added. -->
+        <div class="col-md-6 col-sm-12">
+          <p>Self-hosted video with custom cover (preload not supported)</p>
+          <video poster="https://picsum.photos/id/1069/1080/720" controls playsinline>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Self-hosted video with multiple encodings -->
+        <div class="col-md-6 col-sm-12">
+          <p>Self-hosted video with multiple formats</p>
+          <video controls playsinline preload>
+            <source src="video.mp4" type="video/mp4">
+            <source src="video.mov" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>Video by <strong><a href="https://www.pexels.com/it-it/@tomfisk?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Tom Fisk</a></strong> from <strong><a href="https://www.pexels.com/it-it/foto/1456627/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></p>
+        </div>
+
+        <!-- JavaScript-controlled self-hosted video -->
+        <!-- This video has no controls overlay, it is controlled
+             via the JavaScript API. There are 2 types of buttons,
+             one uses the container to serach for video elements,
+             the other uses selectors for more flexibility. See
+             the JavaScript code for details. -->
+        <div class="col-md-6 col-sm-12">
+          <p>Self-hosted video with JavaScript controls</p>
+          <video id="js-controlled" playsinline loop preload>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <button type="button" class="btn btn-primary btn-sm btn-play"><i class="fa fa-play"></i> (use container)</button>
+          <button type="button" class="btn btn-secondary btn-sm btn-pause"><i class="fa fa-pause"></i> (use container)</button>
+          <button type="button" class="btn btn-primary btn-sm btn-play-selector" data-video-selector="#js-controlled"><i class="fa fa-play"></i> (use selector)</button>
+          <button type="button" class="btn btn-secondary btn-sm btn-pause-selector" data-video-selector="#js-controlled"><i class="fa fa-pause"></i> (use selector)</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="demo.js"></script>
+
+  </body>
+</html>
