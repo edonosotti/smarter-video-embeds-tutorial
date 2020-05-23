@@ -106,6 +106,7 @@ function fixLinksForJsFiddle() {
 
 $(function() {
   var videos = getVideoEmbeds();
+  console.log(videos);
   resizeVideos(videos);
   setCustomCovers(videos);
   setCustomVideoControls();

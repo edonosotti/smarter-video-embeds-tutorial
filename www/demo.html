@@ -22,9 +22,50 @@
     <div class="container">
       <div class="row">
 
-        <!-- Youtube video -->
+        <!-- Youtube video, made responsive with CSS styles only -->
+        <!-- Check the:
+             .responsive-169
+             .responsive-169 iframe
+             styles in demo.css for information.
+             The .do-not-resize class prevents the JS script
+             to resize this element. -->
         <div class="col-md-6 col-sm-12">
-          <p>Responsive YouTube video</p>
+          <p>Responsive YouTube video (CSS only)</p>
+          <div class="responsive-169">
+            <iframe
+              class="do-not-resize"
+              src="https://www.youtube.com/embed/vmR8mg3zPRg"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              frameborder="0"
+              allowfullscreen
+              ></iframe>
+          </div>
+        </div>
+
+        <!-- Vimeo video, made responsive with CSS styles only -->
+        <!-- Check the:
+             .responsive-169
+             .responsive-169 iframe
+             styles in demo.css for information.
+             The .do-not-resize class prevents the JS script
+             to resize this element. -->
+        <div class="col-md-6 col-sm-12">
+          <p>Responsive Vimeo video (CSS only)</p>
+          <div class="responsive-169">
+            <iframe
+              class="do-not-resize"
+              src="https://player.vimeo.com/video/132977816"
+              frameborder="0"
+              allow="fullscreen"
+              allowfullscreen
+              ></iframe>
+          </div>
+        </div>
+        
+        <!-- Youtube video, resized via JS -->
+        <!-- Check demo.js -->
+        <div class="col-md-6 col-sm-12">
+          <p>Responsive YouTube video (resized via JS)</p>
           <iframe
             src="https://www.youtube.com/embed/vmR8mg3zPRg"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -34,9 +75,10 @@
             ></iframe>
         </div>
 
-        <!-- Vimeo video -->
+        <!-- Vimeo video, resized via JS -->
+        <!-- Check demo.js -->
         <div class="col-md-6 col-sm-12">
-          <p>Responsive Vimeo video</p>
+          <p>Responsive Vimeo video (resized via JS)</p>
           <iframe
             src="https://player.vimeo.com/video/132977816"
             width="100%"
