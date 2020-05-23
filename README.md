@@ -1,3 +1,5 @@
+[![codebeat badge](https://codebeat.co/badges/56d1172d-2de5-4d15-9195-398e06056ecc)](https://codebeat.co/projects/github-com-edonosotti-smarter-video-embeds-tutorial-master)
+
 # Smartify Your Video Embeds - Tutorial
 
 This tutorial shows how to:
