@@ -19,8 +19,11 @@ function getVideoEmbeds() {
 
 function resizeVideos(elements) {
   $(elements).each(function() {
+    var aspectRatio = $(this).data("aspect-ratio");
+    aspectRatio = aspectRatio || "16:9";
+    var ratioXY = aspectRatio.split(":");
     var width = $(this).width();
-    var height = parseInt((width * 9) / 16);
+    var height = parseInt((width * parseInt(ratioXY[1])) / ratioXY[0]);
     $(this).height(height);
   });
 }
