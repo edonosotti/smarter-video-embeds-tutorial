@@ -176,7 +176,21 @@
           <button type="button" class="btn btn-primary btn-sm btn-play-selector" data-video-selector="#js-controlled"><i class="fa fa-play"></i> (use selector)</button>
           <button type="button" class="btn btn-secondary btn-sm btn-pause-selector" data-video-selector="#js-controlled"><i class="fa fa-pause"></i> (use selector)</button>
         </div>
-
+        
+        <!-- Video with multiple resoultions -->
+        <!-- This video has multiple <source> elements,
+             each tagged with either class="video-hires"
+             or class="video-lowres". At runtime, the
+             best fitting video is selected via JS. -->
+        <div class="col-xs-12">
+          <p>Video with multiple resolutions</p>
+          <video controls playsinline loop preload>
+            <source src="media/hires.mp4" class="video-hires" type="video/mp4">
+            <source src="media/lowres.mp4" class="video-lowres" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>Video by <strong><a href="https://www.pexels.com/it-it/@anastasia-shuraeva?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Anastasia Shuraeva</a></strong> from <strong><a href="https://www.pexels.com/it-it/foto/4122384/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></p>
+        </div>
       </div>
     </div>
 

@@ -88,6 +88,24 @@ function setCustomSelectorVideoControls() {
   });
 }
 
+function setMultipleResolutionSources() {
+  /* Show high resolution or low resolution videos
+   * depending on the screen size. Screens with
+   * width < 768 (medium in Bootstrap) will get
+   * low resolution videos. The <video> elements
+   * need to have multiple sources, marked with
+   * class="video-hires" or class="video-lowres". */
+  var remove = ($(window).width() < 768) ? 'source.video-hires' : 'source.video-lowres';
+  var videoElements = $(remove).parent();
+  $(remove).remove();
+
+  /* When changing the <source> elements,
+   * the <video> element must be reloaded. */
+  $(videoElements).each(function() {
+    $(this)[0].load();
+  })
+}
+
 function fixLinksForJsFiddle() {
   /* Helper function to change self-hosted video links
    * to absolute URLs to GitHub Pages to run the code
@@ -104,7 +122,7 @@ function fixLinksForJsFiddle() {
 
   $('video').each(function() {
     $(this)[0].load();
-  })
+  });
 }
 
 $(function() {
@@ -113,5 +131,6 @@ $(function() {
   setCustomCovers(videos);
   setCustomVideoControls();
   setCustomSelectorVideoControls();
+  setMultipleResolutionSources();
   fixLinksForJsFiddle();
 });

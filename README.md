@@ -8,6 +8,7 @@ This tutorial shows how to:
  * embed self-hosted hosted videos into `HTML` pages
  * make the embeds responsive with CSS or JS
  * use custom cover images on all kinds of videos
+ * change resolution depending on the device screen size
  * set video options
  * use `JavaScript` to control videos
 
